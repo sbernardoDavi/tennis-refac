@@ -2,10 +2,10 @@ class Game(Player, Point):
     def __init__(self, player1, player2):
         Player.__init__(nome)
         Point.__init__(ponto)
-        player1.nome = "player1"
-        player2.nome = "player2"
-        player1.ponto = 0
-        player2.ponto = 0
+        player1.set_nome("player1")
+        player2.set_nome "player2"
+        player1.set_point(0)
+        player2.set_point(0)
 
         point0 = "Love"
         point2 = "Fifteen"
