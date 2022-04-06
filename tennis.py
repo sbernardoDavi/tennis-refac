@@ -6,64 +6,70 @@ class Game(Player, Point):
         player2.nome = "player2"
         player1.ponto = 0
         player2.ponto = 0
+
+        point0 = "Love"
+        point2 = "Fifteen"
+        point3 = "Thirty"
+        point4 = "forty"
+        empate = "empate"
         
     
     def score(self):
         result = ""
         if (self.p1points == self.p2points and self.p1points < 3):
             if (self.p1points==0):
-                result = "Love"
+                result = "point0"
             if (self.p1points==1):
-                result = "Fifteen"
+                result = "point2"
             if (self.p1points==2):
-                result = "Thirty"
+                result = "point3"
             result += "-All"
         if (self.p1points==self.p2points and self.p1points>2):
-            result = "Deuce"
+            result = "empate"
         
         P1res = ""
         P2res = ""
         if (self.p1points > 0 and self.p2points==0):
             if (self.p1points==1):
-                P1res = "Fifteen"
+                P1res = "point2"
             if (self.p1points==2):
-                P1res = "Thirty"
+                P1res = "point3"
             if (self.p1points==3):
-                P1res = "Forty"
+                P1res = "point4"
             
-            P2res = "Love"
+            P2res = "point0"
             result = P1res + "-" + P2res
         if (self.p2points > 0 and self.p1points==0):
             if (self.p2points==1):
-                P2res = "Fifteen"
+                P2res = "point2"
             if (self.p2points==2):
-                P2res = "Thirty"
+                P2res = "point3"
             if (self.p2points==3):
-                P2res = "Forty"
+                P2res = "point4"
             
-            P1res = "Love"
+            P1res = "point0"
             result = P1res + "-" + P2res
         
         
         if (self.p1points>self.p2points and self.p1points < 4):
             if (self.p1points==2):
-                P1res="Thirty"
+                P1res="point3"
             if (self.p1points==3):
-                P1res="Forty"
+                P1res="point4"
             if (self.p2points==1):
-                P2res="Fifteen"
+                P2res="point2"
             if (self.p2points==2):
-                P2res="Thirty"
+                P2res="point3"
             result = P1res + "-" + P2res
         if (self.p2points>self.p1points and self.p2points < 4):
             if (self.p2points==2):
-                P2res="Thirty"
+                P2res="point3"
             if (self.p2points==3):
-                P2res="Forty"
+                P2res="point4"
             if (self.p1points==1):
-                P1res="Fifteen"
+                P1res="point2"
             if (self.p1points==2):
-                P1res="Thirty"
+                P1res="point3"
             result = P1res + "-" + P2res
         
         if (self.p1points > self.p2points and self.p2points >= 3):
