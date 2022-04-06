@@ -1,12 +1,14 @@
-class Game:
-    def __init__(self, player1Name, player2Name):
-        self.player1Name = player1Name
-        self.player2Name = player2Name
-        self.p1points = 0
-        self.p2points = 0
+class Game(Player, Point):
+    def __init__(self, player1, player2):
+        Player.__init__(nome)
+        Point.__init__(ponto)
+        player1.nome = "player1"
+        player2.nome = "player2"
+        player1.ponto = 0
+        player2.ponto = 0
         
-    def won_point(self, playerName):
-        if playerName == self.player1Name:
+    def won_point(self, player):
+        if player.get_nome = player1
             self.P1Score()
         else:
             self.P2Score()
