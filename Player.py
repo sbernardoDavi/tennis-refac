@@ -13,4 +13,5 @@ def pontuar(self, ponto)
 
 
 def get_point(self)
+    return self._point
     
