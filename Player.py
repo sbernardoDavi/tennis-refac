@@ -11,14 +11,11 @@ def __init__(self, nome:str):
         self._nome = nome
 
 
-def pontuar(self, ponto)
-    self.ponto =+ 1
-
 
 def get_point(self)
     return self._point
 
 
-def set_point(self, point)
-    self._point = point
+def set_point(self)
+    self._point =+ 1
     

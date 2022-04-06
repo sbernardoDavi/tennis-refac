@@ -16,71 +16,71 @@ class Game(Player, Point):
     
     def score(self):
         result = ""
-        if (self.p1points == self.p2points and self.p1points < 3):
-            if (self.p1points==0):
+        if (self.player1.get_point() == self.player2.get_point() and self.player1.get_point() < 3):
+            if (self.player1.get_point()==0):
                 result = point0
-            if (self.p1points==1):
+            if (self.player1.get_point()==1):
                 result = point2
-            if (self.p1points==2):
+            if (self.player1.get_point()==2):
                 result = point3
             result += "-All"
-        if (self.p1points==self.p2points and self.p1points>2):
+        if (self.player1.get_point()==self.player2.get_point() and self.player1.get_point()>2):
             result = empate
         
         P1res = ""
         P2res = ""
-        if (self.p1points > 0 and self.p2points==0):
-            if (self.p1points==1):
+        if (self.player1.get_point() > 0 and self.player2.get_point()==0):
+            if (self.player1.get_point()==1):
                 P1res = point2
-            if (self.p1points==2):
+            if (self.player1.get_point()==2):
                 P1res = point3
-            if (self.p1points==3):
+            if (self.player1.get_point()==3):
                 P1res = point4
             
             P2res = point0
             result = P1res + "-" + P2res
-        if (self.p2points > 0 and self.p1points==0):
-            if (self.p2points==1):
+        if (self.player2.get_point() > 0 and self.player1.get_point()==0):
+            if (self.player2.get_point()==1):
                 P2res = point2
-            if (self.p2points==2):
+            if (self.player2.get_point()==2):
                 P2res = point3
-            if (self.p2points==3):
+            if (self.player2.get_point()==3):
                 P2res = point4
             
             P1res = point0
             result = P1res + "-" + P2res
         
         
-        if (self.p1points>self.p2points and self.p1points < 4):
-            if (self.p1points==2):
+        if (self.player1.get_point()>self.player2.get_point() and self.player1.get_point() < 4):
+            if (self.player1.get_point()==2):
                 P1res=point3
-            if (self.p1points==3):
+            if (self.player1.get_point()==3):
                 P1res=point4
-            if (self.p2points==1):
+            if (self.player2.get_point()==1):
                 P2res=point2
-            if (self.p2points==2):
+            if (self.player2.get_point()==2):
                 P2res=point3
             result = P1res + "-" + P2res
-        if (self.p2points>self.p1points and self.p2points < 4):
-            if (self.p2points==2):
+        if (self.player2.get_point()>self.player1.get_point() and self.player2.get_point() < 4):
+            if (self.player2.get_point()==2):
                 P2res=point3
-            if (self.p2points==3):
+            if (self.player2.get_point()==3):
                 P2res=point4
-            if (self.p1points==1):
+            if (self.player1.get_point()==1):
                 P1res=point2
-            if (self.p1points==2):
+            if (self.player1.get_point()==2):
                 P1res=point3
             result = P1res + "-" + P2res
         
-        if (self.p1points > self.p2points and self.p2points >= 3):
+        if (self.player1.get_point() > self.player2.get_point() and self.player2.get_point() >= 3):
             result = "Advantage " + self.player1Name
         
-        if (self.p2points > self.p1points and self.p1points >= 3):
+        if (self.player2.get_point() > self.player1.get_point() and self.player1.get_point() >= 3):
             result = "Advantage " + self.player2Name
         
-        if (self.p1points>=4 and self.p2points>=0 and (self.p1points-self.p2points)>=2):
+        if (self.player1.get_point()>=4 and self.player2.get_point()>=0 and (self.player1.get_point()-self.player2.get_point())>=2):
             result = "Win for " + self.player1Name
-        if (self.p2points>=4 and self.p1points>=0 and (self.p2points-self.p1points)>=2):
+        if (self.player2.get_point()>=4 and self.player1.get_point()>=0 and (self.player2.get_point()-self.player1.get_point())>=2):
             result = "Win for " + self.player2Name
         return result
 
@@ -100,8 +100,8 @@ class Game(Player, Point):
             self.P2Score()
     
     def P1Score(self):
-        self.p1points +=1
+        self.player1.set_point
     
     
-    def P2Score(self):
-        self.p2points +=1
+    def P2Score(self, point):
+        self.player2.set_point()
