@@ -8,5 +8,5 @@ def get_point(self)
     return self._ponto
 
 
-def set_point(self, ponto)
-    self._ponto = ponto
+def set_point(self)
+    self._ponto =+1

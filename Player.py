@@ -11,11 +11,15 @@ def __init__(self, nome:str):
         self._nome = nome
 
 
-
 def get_point(self)
     return self._point
 
 
 def set_point(self)
     self._point =+ 1
+
+
+def isPontosIguais(self)
+    if(p1.get_point() == p2.get_point())
+        return True
     

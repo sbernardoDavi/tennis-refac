@@ -1,4 +1,4 @@
-class Game(Player, Point):
+class Game():
     def __init__(self, player1, player2):
         Player.__init__(nome)
         Point.__init__(ponto)
@@ -12,6 +12,7 @@ class Game(Player, Point):
         point3 = "Thirty"
         point4 = "forty"
         empate = "empate"
+
         
     
     def score(self):
@@ -73,15 +74,15 @@ class Game(Player, Point):
             result = P1res + "-" + P2res
         
         if (self.player1.get_point() > self.player2.get_point() and self.player2.get_point() >= 3):
-            result = "Advantage " + self.player1Name
+            result = "Advantage " + self.player1.get_nome
         
         if (self.player2.get_point() > self.player1.get_point() and self.player1.get_point() >= 3):
-            result = "Advantage " + self.player2Name
+            result = "Advantage " + self.player2.get_nome
         
         if (self.player1.get_point()>=4 and self.player2.get_point()>=0 and (self.player1.get_point()-self.player2.get_point())>=2):
-            result = "Win for " + self.player1Name
+            result = "Win for " + self.player1.get_nome
         if (self.player2.get_point()>=4 and self.player1.get_point()>=0 and (self.player2.get_point()-self.player1.get_point())>=2):
-            result = "Win for " + self.player2Name
+            result = "Win for " + self.player.get_nome
         return result
 
     
