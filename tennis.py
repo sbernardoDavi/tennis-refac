@@ -7,11 +7,6 @@ class Game(Player, Point):
         player1.ponto = 0
         player2.ponto = 0
         
-    def won_point(self, player):
-        if player.get_nome = player1
-            self.P1Score()
-        else:
-            self.P2Score()
     
     def score(self):
         result = ""
@@ -82,7 +77,14 @@ class Game(Player, Point):
         if (self.p2points>=4 and self.p1points>=0 and (self.p2points-self.p1points)>=2):
             result = "Win for " + self.player2Name
         return result
+
     
+    def won_point(self, player):
+        if player.get_nome = player1
+            self.P1Score()
+        else:
+            self.P2Score()
+
     def SetP1Score(self, number):
         for i in range(number):
             self.P1Score()
